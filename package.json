@@ -1,0 +1,20 @@
+{
+  "name": "natorus",
+  "version": "1.0.0",
+  "description": "Landing page for naturous",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css --w"
+  },
+  "author": "Ihor Tkachuk",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.0",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {}
+}
