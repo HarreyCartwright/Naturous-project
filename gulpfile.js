@@ -1,5 +1,5 @@
 const paths = {
-    src_scss: 'src/sass/main.scss',
+    src_scss: 'src/sass/*.scss',
     dest_css: 'dest/css',
     src_html: 'src/*.html',
     dest_html: 'dest',
