@@ -41,7 +41,6 @@ function watch() {
     gulp.watch(paths.src_html, gulp.series(deleteHTML, copyHTML))
 }
 
-
 //Exports
 exports.copyHTML = copyHTML;
 exports.optimizeImages = optimizeImages;
