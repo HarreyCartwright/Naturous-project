@@ -1,6 +1,5 @@
 .row {
     max-width: $grid-width;
-    background-color: purple;
     margin: 0 auto;
 
     margin-bottom: $gap-vertical;
@@ -13,7 +12,6 @@
     //Selects elemenent width the beggining like..
 
     [class^= "col-"] {
-        background-color: yellow;
         margin-right: $gap-horizontal;
         float: left;
         &:last-of-type {
