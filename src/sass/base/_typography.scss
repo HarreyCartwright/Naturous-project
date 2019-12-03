@@ -39,6 +39,7 @@ body {
     // Gradient text
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     letter-spacing: 2px;
     transition: all .2s;
@@ -51,7 +52,7 @@ body {
 }
 
 .heading-tertiary {
-    font-size: $default-font-size;
+    font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
 }

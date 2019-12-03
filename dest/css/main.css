@@ -70,6 +70,7 @@ body {
   font-weight: 700;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   letter-spacing: 2px;
   transition: all .2s; }
@@ -78,7 +79,7 @@ body {
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
   text-transform: uppercase; }
 
@@ -96,8 +97,8 @@ body {
 .u-mb-80 {
   margin-bottom: 8rem; }
 
-.u-mb-90 {
-  margin-bottom: 9rem; }
+.u-mt-90 {
+  margin-top: 9rem; }
 
 .u-mb-20 {
   margin-bottom: 1.5rem; }
@@ -313,6 +314,54 @@ body {
         .card__details ul li:not(:last-of-type) {
           border-bottom: 1px solid #eee; }
 
+.story {
+  backface-visibility: hidden;
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skew(-12deg); }
+  .story > * {
+    transform: skew(12deg); }
+  .story__shape {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    transform: translateX(-4rem) skew(12deg); }
+  .story__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.2);
+    backface-visibility: hidden;
+    transition: all .5s; }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.8rem;
+    opacity: 0;
+    backface-visibility: hidden;
+    transition: all .5s;
+    padding: 0 2rem; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(95%); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -375,5 +424,9 @@ body {
 
 .section-tours {
   margin-top: -10rem;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 20rem 0;
+  background-color: #f7f7f7; }
+
+.section-stories {
+  padding: 15rem 0;
   background-color: #f7f7f7; }
