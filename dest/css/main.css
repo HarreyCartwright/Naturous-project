@@ -314,12 +314,25 @@ body {
         .card__details ul li:not(:last-of-type) {
           border-bottom: 1px solid #eee; }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .15; }
+  .bg-video__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
 .story {
   backface-visibility: hidden;
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
@@ -353,8 +366,7 @@ body {
     font-size: 1.8rem;
     opacity: 0;
     backface-visibility: hidden;
-    transition: all .5s;
-    padding: 0 2rem; }
+    transition: all .5s; }
   .story:hover .story__caption {
     opacity: 1;
     transform: translate(-50%, -50%); }
@@ -428,5 +440,5 @@ body {
   background-color: #f7f7f7; }
 
 .section-stories {
-  padding: 15rem 0;
-  background-color: #f7f7f7; }
+  position: relative;
+  padding: 15rem 0; }
