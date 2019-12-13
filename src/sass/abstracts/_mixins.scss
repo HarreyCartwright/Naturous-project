@@ -33,6 +33,25 @@
 // //     }
 // // }
 
+/*
+
+$breakpoint choices:
+
+- min-phone
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER of appliance
+ 
+1. Base + typogrpahy > 
+2. general__layout and grid 
+3. page layout 
+4. components;
+
+*/
+
 
 @mixin respond($breakpoint) {
     

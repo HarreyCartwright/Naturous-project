@@ -5,8 +5,16 @@
     margin-bottom: $gap-vertical;
     &:last-of-type {
         margin-bottom: 0;
+        
+        @include respond(tab-port) {
+            margin-bottom: $gap-vertical-small;
+        }
     }
     
+    @include respond(tab-port) {
+        max-width: 50rem;
+    }
+
     @include clearfix;
 
     //Selects elemenent width the beggining like..
@@ -14,8 +22,17 @@
     [class^= "col-"] {
         margin-right: $gap-horizontal;
         float: left;
-        &:last-of-type {
+        &:not(:last-of-type) {
             margin-right: 0;
+           
+            @include respond(tab-port) {
+                margin-bottom: $gap-vertical-small;
+                margin-right: $gap-horizontal;
+            }
+        }
+
+        @include respond(tab-port) {
+            width: 100% !important;
         }
     }
 
