@@ -8,7 +8,6 @@ const paths = {
 }
 
 const gulp = require('gulp');
-const { series } = require('gulp');
 const imagemin = require('gulp-imagemin');
 const sass = require('gulp-sass');
 const clean = require('gulp-clean');
