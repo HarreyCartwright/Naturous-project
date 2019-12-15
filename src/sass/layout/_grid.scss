@@ -20,10 +20,9 @@
     //Selects elemenent width the beggining like..
 
     [class^= "col-"] {
-        margin-right: $gap-horizontal;
         float: left;
         &:not(:last-of-type) {
-            margin-right: 0;
+            margin-right: $gap-horizontal;
            
             @include respond(tab-port) {
                 margin-bottom: $gap-vertical-small;
@@ -43,10 +42,18 @@
 
     .col-1-of-3 {
         width: calc((100% - 2 * #{$gap-horizontal}) / 3);
+
+        // @include respond(tab-land) {
+        //     margin-left: 3rem;
+        // }
     }
     
     .col-1-of-4 {
         width: calc((100% - 3 * #{$gap-horizontal}) / 4);
+
+        // @include respond(tab-land) {
+        //     margin-left: 3rem;
+        // }
     }
 
     .col-2-of-3 {
