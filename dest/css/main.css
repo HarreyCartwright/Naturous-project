@@ -43,6 +43,10 @@ body {
     body {
       padding: 0; } }
 
+body::selection {
+  background-color: #7ed56f;
+  color: #fff; }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -698,6 +702,9 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
+  @media (min-resolution: 192dpi) and (min-width: 600px) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(40, 180, 133, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg); } }
   @media only screen and (max-width: 900px) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
@@ -838,12 +845,12 @@ body {
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
   @media only screen and (max-width: 900px) {
     .navigation__background {
-      top: 4rem;
-      right: 4rem; } }
+      top: 4.5rem;
+      right: 4.5rem; } }
   @media only screen and (max-width: 600px) {
     .navigation__background {
-      top: 3.5rem;
-      right: 3.5rem; } }
+      top: 4.5rem;
+      right: 4rem; } }
 
 .navigation__nav {
   height: 100vh;

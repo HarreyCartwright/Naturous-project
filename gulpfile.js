@@ -4,13 +4,17 @@ const paths = {
     src_html: 'src/*.html',
     dest_html: 'dest',
     src_img: 'src/img/*',
-    dest_img: 'dest/img'
+    dest_img: 'dest/img',
+    main_css: "dest/css/main.css",
 }
 
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const sass = require('gulp-sass');
 const clean = require('gulp-clean');
+const cssmin = require('gulp-cssmin');
+const rename = require('gulp-rename');
+const autoprefixer = require('gulp-autoprefixer');
 
 //copy all HTML files
 function copyHTML() {
@@ -40,9 +44,22 @@ function watch() {
     gulp.watch(paths.src_html, gulp.series(deleteHTML, copyHTML))
 }
 
+function prefixer() {
+    return gulp.src(paths.main_css).pipe(autoprefixer({ cascade: false, overrideBrowserslist: ['last 2 versions'] })).pipe(gulp.dest(paths.dest_css))
+}
+
+function minimizeCSS() {
+    return gulp.src(paths.main_css).pipe(cssmin()).pipe(rename({ suffix: ".min" })).pipe(gulp.dest(paths.dest_css));
+}
+
+
 //Exports
+
+
 exports.copyHTML = copyHTML;
 exports.optimizeImages = optimizeImages;
 exports.compileSass = compileSass;
 exports.deleteHTML = deleteHTML;
 exports.watch = watch;
+exports.prefixer = prefixer;
+exports.minimizeCSS = minimizeCSS;
